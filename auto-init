@@ -2,4 +2,3 @@
 if [ ! -d node_modules ]; then
   ./init
 fi
-

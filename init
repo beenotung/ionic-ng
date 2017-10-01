@@ -1,4 +1,6 @@
 #!/bin/bash
-npm install
+hash yarn 2>/dev/null || npm i -g yarn
+hash npm-run 2>/dev/null || yarn global add npm-run
+yarn install
 ./gu
 echo 'done.'
