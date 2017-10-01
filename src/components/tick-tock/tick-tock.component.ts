@@ -11,7 +11,7 @@ export class TickTockComponent implements OnInit {
   // Current time string.
   public currentTime: string;
 
-  /**
+  /***
    * Component constructor with injected dependencies.
    * @param tickTockService
    */
