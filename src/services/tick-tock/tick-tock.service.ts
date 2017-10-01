@@ -14,16 +14,6 @@ export class TickTockService {
   private readonly TIMEOUT: number = 1000;
 
   /**
-   * Get current time observable.
-   * @returns Observable<string>
-   */
-  public getTick(): Observable<string> {
-    return Observable
-      .timer(0, this.TIMEOUT)
-      .map((tick) => TickTockService.getNowString());
-  }
-
-  /**
    * Extend time value with zero if required.
    * @param value
    * @returns {string}
@@ -45,6 +35,16 @@ export class TickTockService {
     const seconds = TickTockService.formatTimeNumber(date.getSeconds());
 
     return `${hours}:${minutes}:${seconds}`;
+  }
+
+  /**
+   * Get current time observable.
+   * @returns Observable<string>
+   */
+  public getTick(): Observable<string> {
+    return Observable
+      .timer(0, this.TIMEOUT)
+      .map((tick) => TickTockService.getNowString());
   }
 
 }
