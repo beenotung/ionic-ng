@@ -6,15 +6,23 @@ import {StatusBar} from "@ionic-native/status-bar";
 
 import {MyApp} from "./app.component";
 import {HomePageModule} from "../pages/home/home.module";
+import {LineModule} from "ioniclib";
+import {LoadingModule} from "../loading.module";
+import {HorizonModule} from "../horizon.module";
+import {ProgressModule} from "../progress.module";
 
 @NgModule({
   declarations: [
-    MyApp,
+    MyApp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HomePageModule,
+    HomePageModule
+    , LineModule
+    , LoadingModule
+    , HorizonModule
+    , ProgressModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [MyApp],
